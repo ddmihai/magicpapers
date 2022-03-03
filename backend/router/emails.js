@@ -7,3 +7,6 @@ const resetPassword = require('../controller/emails/resetPassword.js');
 router.post('/send-email', resetPassword.reset);
 
 module.exports = router;
+
+
+

@@ -12,16 +12,18 @@ const {deleteImage} = require('../../services/deleteImage.js');
 */
 
 exports.addAvatar = async(req, res, next) => {
-    const {userID} = req.body;
+    let {userID} = req.body;
 
     try {
     /* Create the image link */
-        const url = req.protocol + '://' + req.get('host');
-        const imageLink = req.file ? url + '/images/' + req.file.filename : '';
+        let url = req.protocol + '://' + req.get('host');
+        let imageLink = req.file ? url + '/images/' + req.file.filename : '';
 
-            const user      = await selectUserByID(userID);
-            const payload   = {userAvatar: imageLink};
+        /* Get the old user and look for the picture */
+            let user      = await selectUserByID(userID);
+            let payload   = {userAvatar: imageLink};
             await updateUser(payload, userID);
+            /* Delete the picture */
             deleteImage(user[0].userAvatar);
             res.status(201).send('User updated!');
 
