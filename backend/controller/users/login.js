@@ -2,7 +2,10 @@ const {selectUser} = require('../../dataAccessLayer/dao.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-
+/* 
+    Get the body elements, query the db for email, compare password, 
+    create JWT token, send payload to frontend 
+*/
 exports.login = async (req, res, next) => {
     const {email, password} = req.body;
     let user;

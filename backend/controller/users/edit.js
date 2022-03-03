@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 /* 
     This function purpose is to be execute only within the user dashboard. 
-    Create a new function to reset password by email
+    Create another function to reset password by email
 */
 exports.edit = async(req, res, next) => {
     const {userID, first_name, last_name, password, gender, age} = req.body;
@@ -21,9 +21,10 @@ exports.edit = async(req, res, next) => {
         };
         await updateUser( payload, userID);
         res.status(201).send('User updated!');
-
+        
         /* Catch errors */
     } catch (error) {
-        if (error) res.status(500).send('Something went wrong!');
+        if (error) res.status(500).send(error);
+
     }
 }
