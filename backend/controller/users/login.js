@@ -1,4 +1,4 @@
-const {selectUser} = require('../../dataAccessLayer/dao.js');
+const {selectUser} = require('../../dataAccessLayer/usersLayers.js');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 

@@ -1,4 +1,4 @@
-const {selectUserByID, updateUser} = require('../../dataAccessLayer/dao.js');
+const {selectUserByID, updateUser} = require('../../dataAccessLayer/usersLayers.js');
 const bcrypt = require('bcrypt');
 
 /* 
@@ -24,7 +24,7 @@ exports.edit = async(req, res, next) => {
         
         /* Catch errors */
     } catch (error) {
-        if (error) res.status(500).send(error);
+        if (error) res.status(500).send('Something went wrong.');
 
     }
 }

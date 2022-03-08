@@ -1,4 +1,4 @@
-const {insertUser} = require('../../dataAccessLayer/dao.js');
+const {insertUser} = require('../../dataAccessLayer/usersLayers.js');
 const bcrypt = require('bcrypt');
 
 

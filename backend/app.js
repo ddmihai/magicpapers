@@ -5,7 +5,6 @@ const path      = require('path');
 const helmet    = require('helmet');
 
 
-
 /* Security */
 app.use(helmet());
 app.use(cors());
@@ -26,7 +25,6 @@ const emails = require('./router/emails.js');
 /* Endpoints */
 app.use('/api', userRouter);
 app.use('/api', emails);    
-
 
 
 

@@ -48,6 +48,39 @@ module.exports = {
                 return resolve(response);
             });
         });
+    },
+
+    /* Add a silenced user */
+    silenceUser: (parameters) => {
+        const sqlStatement = 'INSERT INTO silenced SET ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, parameters, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    /* Select all silenced users */
+    getAllSilencedUsers: () => {
+        const sqlStatement = 'SELECT * FROM silenced';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    /* Delete from silenced users */
+    deleteSilencedUser: (userID) => {
+        const sqlStatement = 'DELETE FROM silenced WHERE userID = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, userID, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
     }
 
 }

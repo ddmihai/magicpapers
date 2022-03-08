@@ -1,4 +1,4 @@
-const {selectUserByID, updateUser} = require('../../dataAccessLayer/dao.js');
+const {selectUserByID, updateUser} = require('../../dataAccessLayer/usersLayers.js');
 const {deleteImage} = require('../../services/deleteImage.js');
 
 
