@@ -22,12 +22,13 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 const userRouter = require('./router/users.js');
 const emails = require('./router/emails.js');
 const tickets = require('./router/tickets.js');
+const admin  = require('./router/admin.js');
 
 /* Endpoints */
 app.use('/api', userRouter);
 app.use('/api', emails);    
 app.use('/api', tickets);
-
+app.use('/api', admin);
 
 
 

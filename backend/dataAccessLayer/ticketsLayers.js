@@ -32,6 +32,26 @@ module.exports = {
                 return resolve(response);
             });
         });
+    },
+
+    selectTicketByID: (parameters) => {
+        const sqlStatement = 'SELECT * FROM tickets WHERE tiketID = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, parameters, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    updateAticket: (payload, tiketID) => {
+        const sqlStatement = 'UPDATE tickets SET ? WHERE tiketID = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, [payload, tiketID], (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
     }
 
 
