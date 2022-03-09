@@ -16,4 +16,4 @@ router.post('/silence-user',    auth, silenceUser.add);
 router.put('/edit-user',        auth, editUser.edit);
 router.put('/edit-avatar',      auth, multer, addAvatar.addAvatar);
 
-module.exports = router;
+module.exports = router;    

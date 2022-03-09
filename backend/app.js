@@ -21,10 +21,13 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 /* Routes */
 const userRouter = require('./router/users.js');
 const emails = require('./router/emails.js');
+const tickets = require('./router/tickets.js');
 
 /* Endpoints */
 app.use('/api', userRouter);
 app.use('/api', emails);    
+app.use('/api', tickets);
+
 
 
 
