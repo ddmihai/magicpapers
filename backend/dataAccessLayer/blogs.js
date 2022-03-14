@@ -45,4 +45,15 @@ module.exports = {
         });
     },
 
+    /* Insert comment payload */
+    insertComment: (payload) => {
+        const sqlStatement = 'INSERT INTO comments SET ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, payload, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
 }
