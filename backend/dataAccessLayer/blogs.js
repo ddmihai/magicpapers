@@ -1,7 +1,7 @@
 const db = require('../connection/connection.js');
 
 module.exports = {
-    /* Insert blog payload */
+ 
     insertBlog: (payload) => {
         const sqlStatement = 'INSERT INTO blog SET ?';
         return new Promise((resolve, reject) => {
@@ -12,7 +12,7 @@ module.exports = {
         });
     },
 
-    /* Insert blog payload */
+  
     insertPost: (payload) => {
         const sqlStatement = 'INSERT INTO posts SET ?';
         return new Promise((resolve, reject) => {
@@ -23,7 +23,7 @@ module.exports = {
         });
     },
 
-    /* Select blog */
+   
     selectPostByID: (parameters) => {
         const sqlStatement = 'SELECT * FROM posts WHERE postID = ?';
         return new Promise((resolve, reject) => {
@@ -34,7 +34,7 @@ module.exports = {
         });
     },
 
-     /* Update post */
+    
      updatePost: (payload, postID) => {
         const update = 'UPDATE posts SET ? WHERE postID = ?';
         return new Promise((resolve, reject) => {
@@ -45,7 +45,7 @@ module.exports = {
         });
     },
 
-    /* Insert comment payload */
+    
     insertComment: (payload) => {
         const sqlStatement = 'INSERT INTO comments SET ?';
         return new Promise((resolve, reject) => {

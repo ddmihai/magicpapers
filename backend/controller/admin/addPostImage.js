@@ -2,7 +2,7 @@ const {selectPostByID, updatePost} = require('../../dataAccessLayer/blogs.js');
 const {deleteImage} = require('../../services/deleteImage.js');
 
 exports.addImage = async (req, res, next) => {
-    const {userID, postID} = req.body;
+    const {postID} = req.body;
 
     try 
     {
