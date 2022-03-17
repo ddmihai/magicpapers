@@ -42,4 +42,44 @@ module.exports = {
         });
     },
 
+    deleteImageByID: (payload) => {
+        const sqlStatement = 'DELETE FROM bookImages WHERE imageID = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, payload, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    selectImageByImageID: (variable) => {
+        const sqlStatement = 'SELECT * FROM bookImages WHERE imageID  = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, variable, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    insertPromotion: (payload) => {
+        const sqlStatement = 'INSERT INTO promotions SET ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, payload, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    deletePromotion: (variable) => {
+        const sqlStatement = 'DELETE FROM promotions WHERE bookID = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, variable, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
 }
