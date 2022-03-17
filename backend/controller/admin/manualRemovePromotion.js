@@ -11,7 +11,7 @@ exports.remove = async (req, res, next) => {
 
     try {
         await deletePromotion(bookID);
-        await updateBook({ available: true })
+        await updateBook({ available: true }, bookID)
         res.status(201).send('Promotion deleted!');
     } 
     catch (error) {

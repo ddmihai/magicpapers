@@ -13,7 +13,8 @@ exports.add = async (req, res, next) => {
         await insertPromotion({
             bookID, new_price, remove_time
         });
-        
+        /* Trigger the automation delete from table */
+        require('../../services/automatedRemovePromotion.js')();
         res.status(201).send('promotion added');
     } 
     catch (error) {

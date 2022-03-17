@@ -82,4 +82,37 @@ module.exports = {
         });
     },
 
+    getAllPromotions: () => {
+        const sqlStatement = 'SELECT * FROM promotions';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    /* Selectors */
+    selectAllBooks: (variable) => {
+        const sqlStatement = 'SELECT * FROM books';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, variable, (error, response) => {
+                if (response.length === 0) return reject(false);
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    selectAllPromotions: (variable) => {
+        const sqlStatement = 'SELECT * FROM promotions';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, variable, (error, response) => {
+                if (response.length === 0) return reject(false);
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
 }
