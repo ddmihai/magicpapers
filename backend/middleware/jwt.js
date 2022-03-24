@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
     } else {
       next();
     }
-  } catch {
+  } catch(error) {
     res.sendStatus(401);
   }
 };

@@ -1,0 +1,78 @@
+.headermain {
+    min-height: 50px;
+    display: flex;
+    background: black;
+    align-items: center;
+    padding: 15px;
+}
+
+.mainIcon {
+    color: #fa8100;
+    font-weight: lighter;
+}
+
+/* Desktop links */
+.desktopLinks a{
+    color: #fa8100;
+    margin: 40px;
+    text-decoration: none;
+}
+
+.desktopLinks {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.menuIcon {
+    display: none;
+}
+
+/* MobileLinks */
+.mobileLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.mobileLinks a {
+    color: #fa8100;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.logoutButton {
+    background: transparent;
+    color: #fa8100;
+    border: none;
+    font-size: 15px;
+    margin-left: 45px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .desktopLinks {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+        margin-left: auto;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .mainIcon {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+
+    .logoutButton {
+        align-self: flex-start;
+        margin: 0;
+        margin-top: 12px;
+    }
+    
+  }

@@ -8,6 +8,7 @@ const loginUser     = require('../controller/users/login.js');
 const editUser      = require('../controller/users/edit.js');
 const addAvatar     = require('../controller/users/uploadAvatar.js');
 const silenceUser   = require('../controller/users/silenceUser.js');
+const getUserBID    = require('../controller/users/selectLoggedUser.js');
 
 router.post('/create-user',     createUser.createUser);
 router.post('/login-user',      loginUser.login);
@@ -15,5 +16,7 @@ router.post('/silence-user',    auth, silenceUser.add);
 
 router.put('/edit-user',        auth, editUser.edit);
 router.put('/edit-avatar',      auth, multer, addAvatar.addAvatar);
+
+router.get('/select-user-id',    getUserBID.getUserBID);
 
 module.exports = router;    

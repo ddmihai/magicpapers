@@ -1,0 +1,33 @@
+.ticketCreated {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 350px;
+    max-width: 350px;
+    background-color: whitesmoke;
+}
+
+/* header ticket */
+.headerTicket {
+    color: #fa8100;
+    background-color: black;
+    flex: 1 1 200px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bodyTicket {
+    padding: 10px;
+    text-align: left;
+    font-size: .9em;
+}
+
+.getTicketDetails {
+    margin: 10px;
+    color: #fa8100;
+    border: none;
+    width: 50px;
+
+    background-color: transparent;
+}

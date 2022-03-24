@@ -12,6 +12,6 @@ const getTickets   = require('../controller/tickets/getAllTickets.js');
 
 router.post('/create-ticket',   auth, createTicket.add);
 router.delete('/delete-ticket', auth, deleteTicket.delete);
-router.get('/get-tickets',      auth, getTickets.get);
+router.get('/get-tickets/:id',      getTickets.get);
 
 module.exports = router;

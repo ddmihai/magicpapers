@@ -13,11 +13,11 @@ const {deleteImage} = require('../../services/deleteImage.js');
 
 exports.addAvatar = async(req, res, next) => {
     let {userID} = req.body;
-
+    let imageLink;
     try {
     /* Create the image link */
         let url = req.protocol + '://' + req.get('host');
-        let imageLink = req.file ? url + '/images/' + req.file.filename : '';
+        imageLink = req.file ? url + '/images/' + req.file.filename : '';
 
         /* Get the old user and look for the picture */
             let user      = await selectUserByID(userID);
@@ -29,6 +29,9 @@ exports.addAvatar = async(req, res, next) => {
 
     } catch (error) {
         if (error.syscall === 'unlink') res.status(201).send('Photo uploaded.');
-        else                            res.status(500).send('Something went wrong!');
+        else {
+            res.status(500).send('Something went wrong!');
+            if (imageLink) deleteImage(imageLink);
+        };
     }
 }

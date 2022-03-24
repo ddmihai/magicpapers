@@ -24,10 +24,10 @@ module.exports = {
         });
     },
 
-    selectTickets: (parameters) => {
+    selectTickets: (variable) => {
         const sqlStatement = 'SELECT * FROM tickets WHERE userID = ?';
         return new Promise((resolve, reject) => {
-            db.query(sqlStatement, parameters, (error, response) => {
+            db.query(sqlStatement, [variable], (error, response) => {
                 if (error) return reject(error);
                 return resolve(response);
             });

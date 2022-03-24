@@ -1,0 +1,52 @@
+.basicDashboardMain {
+    /* border: 2px solid red; */
+    /* min-height: 100vh; */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.dashboardWellcome {
+    padding: 20px;
+    font-weight: lighter;
+    background-color: black;
+    color: #fa8100;
+}
+
+.informationDetails {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Avatar change update */
+.infoAndAvatar button {
+    background: none;
+    border: none;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #fa8100;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.infoAndAvatar input {
+    margin-top: 7px;
+}
+
+.infoAndAvatar input::file-selector-button {
+    background-color: black;
+    color: #fa8100;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+
+.infoAndAvatar {
+    display: flex;
+    flex-direction: column;
+}

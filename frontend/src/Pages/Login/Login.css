@@ -1,0 +1,58 @@
+.loginMain {
+    min-height: 100vh;
+}
+
+.centeredLogin {
+    border: 1px solid black;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.wellcomeLogin {
+    padding: 15px;
+    background: black;
+    color: #fa8100;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputLogin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 10px;
+    max-width: 400px;
+}
+
+.inputLogin label {
+    font-size: .8em;
+    margin-bottom: 5px;
+}
+
+.inputLogin input {
+    max-width: 400px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(184, 184, 184);
+}
+
+.loginForm button {
+    width: 200px;
+    padding: 12px;
+    margin: 20px;
+    background-color: black;
+    color: #fa8100;
+    border: none;
+    font-weight: bolder;
+    border-radius: 5px; 
+}
+
+.introLogin {
+    padding: 20px;
+    border-bottom: 1px solid black;
+}

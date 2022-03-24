@@ -31,7 +31,6 @@ module.exports = {
         const sqlStatement = 'SELECT * FROM users WHERE userID = ?';
         return new Promise((resolve, reject) => {
             db.query(sqlStatement, variable, (error, response) => {
-                if (response.length === 0) return reject(false);
                 if (error) return reject(error);
                 return resolve(response);
             });
@@ -79,6 +78,17 @@ module.exports = {
             db.query(sqlStatement, userID, (error, response) => {
                 if (error) return reject(error);
                 return resolve(response);
+            });
+        });
+    },
+
+    /* Select all from admins */
+    selectAdmins: (userID) => {
+        const sqlStatement = 'SELECT * FROM admin WHERE userID = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, userID, (error, response) => {
+                if (error) return reject(error);
+                else return resolve(response);
             });
         });
     }
