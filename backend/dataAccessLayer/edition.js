@@ -23,6 +23,18 @@ module.exports = {
         });
     },
 
+      /* Select edition */
+      selectAllEditions: () => {
+        const sqlStatement = 'SELECT * FROM edition';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, (error, response) => {
+                if (response.length === 0) return reject(false);
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
      /* Update edition */
      updateEdition: (payload, editionID) => {
         const update = 'UPDATE edition SET ? WHERE editionID = ?';

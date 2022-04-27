@@ -23,6 +23,17 @@ module.exports = {
         });
     },
 
+      /* Select genere */
+      selectAllGeneres: () => {
+        const sqlStatement = 'SELECT * FROM genere';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
      /* Update genere */
      updateGenere: (payload, genereID) => {
         const update = 'UPDATE genere SET ? WHERE genereID = ?';

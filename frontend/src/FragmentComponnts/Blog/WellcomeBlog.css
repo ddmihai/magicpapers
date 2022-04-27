@@ -1,0 +1,54 @@
+.magicPapersBlogBanner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 500px;
+}
+
+.blogBannerIntro {
+    flex: 1 1 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blogBannerImage {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.wellcomeBlogParagraph {
+    padding: 20px;
+    font-weight: bolder;
+    color: #fa8100;
+}
+
+.blogBannerIntro h1 {
+    padding: 0 0 20px 20px;
+    font-size: 1.7em;
+}
+
+.blogIntroBannerText {
+    font-style: italic;
+    padding: 0 20px 20px 20px;
+    font-size: .9em;
+    color: grey;
+}
+
+.blogBannerIntro ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+.blogBannerIntro ul li {
+    font-size: .9em;
+    font-weight: lighter;
+    color: #fa8100;
+    margin: 15px;
+}

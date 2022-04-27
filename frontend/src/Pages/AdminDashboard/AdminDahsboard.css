@@ -1,0 +1,50 @@
+.bookAddSection {
+    border: 1px solid black;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bookAddSection h3 {
+    background-color: black;
+    color: #fa8100;
+    padding: 20px;
+}
+
+
+/* Edition and genere book wrapper */
+.genereEditionButtons {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.genereEditionButtons button {
+    height: 35px;
+    color: #fa8100;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+
+}
+
+.blogSectionAdmin {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.blogSectionAdmin h3 {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.blogSectionAdmin button {
+    background-color: black;
+    color: #fa8100;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    margin: 12px;
+}

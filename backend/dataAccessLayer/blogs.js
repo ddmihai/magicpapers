@@ -56,4 +56,24 @@ module.exports = {
         });
     },
 
+    selectAllBlogs: () => {
+        const sqlStatement = 'SELECT * FROM blog';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+    selectAllBlogsFromCategory: variable => {
+        const sqlStatement = 'SELECT * FROM posts WHERE blogID = ?';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, [variable], (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
 }

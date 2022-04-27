@@ -1,0 +1,13 @@
+.companyStoryMain {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.titleStory {
+    color: #fa8100;
+    font-weight: lighter;
+    font-size: 2em;
+    padding-bottom: 30px;
+}

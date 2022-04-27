@@ -7,7 +7,7 @@ exports.get = async (req, res, next) => {
     try 
     {
         const tickets = await selectTickets(userID);
-        res.send(tickets);
+        res.status(200).send(tickets);
     } 
 
     catch (error) 

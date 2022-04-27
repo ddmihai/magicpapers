@@ -1,0 +1,50 @@
+.AddBookNewImage {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.AddBookNewImage h1 {
+    background-color: black;
+    color: #fa8100;
+    padding: 20px;
+    font-weight: lighter;
+}
+
+.AddBookNewImage p {
+    padding: 20px;
+}
+
+.AddBookNewImage input {
+    font-weight: bold;
+    width: 100%;
+}
+
+.AddBookNewImage input::-webkit-file-upload-button {
+    background-color: black;
+    border: none;
+    height: 35px;
+    width: 120px;
+    border-radius: 5px;
+    color: #fa8100;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.ImageBookUploadWarning {
+    background-color: black;
+    padding: 20px;
+    color: #fa8100;
+    border-left: 8px solid #fa8100;
+    margin-top: 20px;
+}
+
+.adminBackToDashboard {
+    color: #fa8100;
+    border: none;
+    margin: 20px 0 0 10px;
+    background-color: transparent;
+    font-weight: bolder;
+    border-bottom: 2px solid #fa8100;
+    padding: 3px;
+}

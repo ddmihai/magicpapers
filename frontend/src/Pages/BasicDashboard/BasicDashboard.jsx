@@ -43,9 +43,11 @@ export const BasicDashboard = () => {
             </div>
         </div>
         
-        {/*  */}
         <PeronalDetails user={user} />
-        <TicketsComponent user={user} />
+       {
+        //  Render only if the user is not admin
+        !user.admin &&  <TicketsComponent user={user} />
+       }
     </main>
   )
 }

@@ -5,7 +5,7 @@ const updateAvatar = async ( user, image) => {
     fd.append('image', image, image.name);
     fd.append('userID', user.userID);
     const URL = 'http://localhost:3000/api/edit-avatar';
-    console.log(user.userID);
+    
     try 
     {
         const status = await axios.put(URL, fd,

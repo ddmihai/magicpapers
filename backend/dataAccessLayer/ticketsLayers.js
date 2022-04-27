@@ -34,6 +34,17 @@ module.exports = {
         });
     },
 
+    getAllTickets: () => {
+        const sqlStatement = 'SELECT * FROM tickets WHERE seen_admin = 0';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
+
     selectTicketByID: (parameters) => {
         const sqlStatement = 'SELECT * FROM tickets WHERE tiketID = ?';
         return new Promise((resolve, reject) => {

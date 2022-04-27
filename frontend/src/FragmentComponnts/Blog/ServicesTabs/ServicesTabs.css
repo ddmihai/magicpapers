@@ -1,0 +1,23 @@
+.serviceIndividualTab {
+    border: .5px solid #fa8100;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    max-width: 300px;
+    padding: 30px;
+}
+
+.serviceTitle {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.serviceText {
+    font-size: .9em;
+}
+
+.serviceIcon {
+    text-align: center;
+    padding: 20px;
+}

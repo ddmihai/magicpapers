@@ -19,6 +19,9 @@
     padding-bottom: 25px;
 }
 
-
-
-
+.addNewTicket {
+    padding: 20px;
+    display: flex;
+    background: black;
+    color: #fa8100;
+}

@@ -1,0 +1,43 @@
+.adminEditTicket {
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.adminEditTicket h1 {
+    padding: 20px;
+    font-weight: lighter;
+    color: #fa8100;
+    background-color: black;
+}
+
+.adminEditTicket p {
+    padding: 20px;
+}
+
+.adminWarning {
+    background-color: black;
+    color: #fa8100;
+    border-left: 6px solid #fa8100;
+}
+
+.adminEditTicket form {
+    width: 100%;
+    padding: 5px;
+}
+
+.adminEditTicket textarea {
+    border: .5px solid grey;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.adminEditTicket input {
+    background-color: black;
+    border: none;
+    color: #fa8100;
+    width: 120px;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 35px;
+}

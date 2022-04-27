@@ -115,4 +115,14 @@ module.exports = {
         });
     },
 
+    selectLastAddedBook: () => {
+        const sqlStatement = 'SELECT * FROM books ORDER BY bookID DESC LIMIT 1';
+        return new Promise((resolve, reject) => {
+            db.query(sqlStatement, (error, response) => {
+                if (error) return reject(error);
+                return resolve(response);
+            });
+        });
+    },
+
 }

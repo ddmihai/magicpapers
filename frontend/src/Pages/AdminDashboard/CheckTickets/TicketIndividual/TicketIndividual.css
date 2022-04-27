@@ -1,0 +1,9 @@
+.ticketIndividual {
+    border: 1px solid black;
+    flex: 1 1 300px;
+    max-width: 380px;
+    padding: 15px;
+    cursor: pointer;
+    border-left: 8px solid #fa8100;
+    background-color: whitesmoke;
+}

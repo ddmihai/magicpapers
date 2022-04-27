@@ -1,0 +1,73 @@
+.mainTicketDetaisl {
+    max-width: 1400px;
+    margin: 50px auto;
+}
+
+.ticketDetailsTitle {
+    background-color: black;
+    color: #fa8100;
+    padding: 15px;
+    font-weight: lighter;
+}
+
+.mainTicketWrapper {
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Left */
+.ticketDetailsMenu {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+/* Buttons div */
+.sideOPtionsTicket {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.sideOPtionsTicket button {
+    margin: 0 auto;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    color: #fa8100;
+    font-weight: bolder;
+}
+
+
+
+
+/* Right */
+.ticketDetailsInfo {
+    flex: 1 1 300px;
+}
+
+.ticketContext {
+    padding: 20px;
+}
+
+.adminAnswer {
+    padding: 20px;
+}
+
+.adminInformation {
+    padding: 20px;
+    background-color: black;
+    border-left: 8px solid #fa8100;
+    color: #fa8100;
+}
+
+.responseDetails {
+    padding-left: 20px;
+    font-size: .8em;
+    padding-bottom: 20px;
+    color: gray;
+    font-style: italic;
+}

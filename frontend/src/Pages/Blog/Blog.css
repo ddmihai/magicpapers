@@ -1,0 +1,31 @@
+.blogMainWrapper {
+    border: 2px solid red;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Blog categories css */
+.wellcomeToBlogsCat {
+    display: flex;
+    padding: 20px;
+    background-color: black;
+    color: #fa8100;
+    align-items: center;
+}
+
+.listBlogWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blogLeft {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.blogRight {
+    flex: 1 1 600px;
+
+}

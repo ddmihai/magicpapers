@@ -1,0 +1,9 @@
+.blogCategoryList {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.blogCategoryList:nth-of-type(odd) {
+    background-color: whitesmoke;
+}
+

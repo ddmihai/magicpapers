@@ -8,6 +8,12 @@ import { Products } from '../Pages/Products/Products'
 import { Signup } from '../Pages/Signup/Signup'
 import { Blog } from '../Pages/Blog/Blog'
 import { BasicDashboard } from '../Pages/BasicDashboard/BasicDashboard'
+import { TicketDetails } from '../Pages/BasicDashboard/TicketDetails/TicketDetails'
+import { TicketDetailsAdmin } from '../Pages/AdminDashboard/CheckTickets/TicketDetails/TicketDetails'
+import { BookSection } from '../Pages/AdminDashboard/BookCreation/BookSection'
+import { AddBookImage } from '../Pages/AdminDashboard/BookCreation/AddBooForm/AddBookImage/AddBookImage'
+import { AdminCreatePost } from '../Pages/Blog/AdminCreatePost/AdminCreatePost'
+
 
 
 export const Router = () => {
@@ -23,7 +29,11 @@ export const Router = () => {
             <Route path='/signup' element={<Signup />}/>
             <Route path='/blog' element={<Blog />}/>
             <Route path='/user-dashboard' element={<BasicDashboard />} />
-
+            <Route path='/ticket-details' element={<TicketDetails />} />
+            <Route path='/ticket-details-admin' element={<TicketDetailsAdmin />} />
+            <Route path='/admin-add-book' element={<BookSection />} />
+            <Route path='/admin-add-book-img' element={<AddBookImage />} />
+            <Route path='/admin-create-blogpost' element={<AdminCreatePost />} />
         </Routes>        
     </div>
   )

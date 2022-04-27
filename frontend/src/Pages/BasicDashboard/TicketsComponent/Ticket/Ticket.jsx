@@ -1,9 +1,11 @@
 import React from 'react';
 import { BsCaretDown } from 'react-icons/bs';
+import { useNavigate } from "react-router-dom";
 import './Ticket.css';
 
 export const Ticket = ({tickets}) => {
 
+  let navigate = useNavigate();
   let dateCreated = new Date(tickets.created_time)
    let time = {
        day: dateCreated.getDate(),
@@ -13,7 +15,7 @@ export const Ticket = ({tickets}) => {
 
    const getTicketDetails = (id) => {
         sessionStorage.setItem('selectedTicket', id);
-
+        navigate('/ticket-details');
    }
 
   return (
